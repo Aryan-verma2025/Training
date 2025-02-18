@@ -1,3 +1,0 @@
-This is a newBranch
-THis change is made in master branch
-asdfsadf

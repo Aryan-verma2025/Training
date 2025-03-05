@@ -13,10 +13,6 @@ const gameStates = {
     "Won":3
 }
 
-const turns = {
-    "P1":1,
-    "P2":2
-}
 
 function start(){
 
@@ -58,7 +54,7 @@ function init(){
 
     updateScore();
 
-    gameState = gameStates.P1_turn;
+    gameState = gameStates.Ready;
 
     rollP1.addEventListener("click",handleRoll);
     rollP2.addEventListener("click",handleRoll);
@@ -66,12 +62,15 @@ function init(){
     saveP1.addEventListener("click",handleSave);
     saveP2.addEventListener("click",handleSave);
 
+
+
     winnerName.innerText = "";
 
     updateTurn();
 
 
 }
+
 
 function updateScore(){
     currentScoreEP1.innerText = currentScoreP1;
@@ -99,11 +98,15 @@ function showDice(value){
 
 function handleRoll(event){
 
-
-    if(gameState==gameStates.Ready){
+    if(gameState == gameStates.Ready){
         nameP1.setAttribute("disabled","true");
         nameP2.setAttribute("disabled","true");
-    }
+
+        if(event.target.id=="rollP1")
+        gameState = gameStates.P1_turn;
+        else
+        gameState = gameStates.P2_turn
+    } 
 
     const roll = rollDice();
 
@@ -158,7 +161,7 @@ function updateTurn(){
     if(gameState == gameStates.P1_turn){
         document.getElementById("player1Card").style.border='3px solid blue';
         document.getElementById("player2Card").style.border='3px solid transparent';
-    }else{
+    }else if(gameState == gameStates.P2_turn){
         document.getElementById("player2Card").style.border='3px solid white';
         document.getElementById("player1Card").style.border='3px solid transparent';
     }

@@ -145,7 +145,7 @@
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 7px;
+        grid-gap: 0.3rem;
         margin:auto;
         padding:0.5rem;
         border-radius: 1rem;
@@ -177,6 +177,8 @@
             flex-direction: column;
             justify-content: space-around;
             padding: 1rem;
+            width:30%;
+            height: 70%;
         }
         .dice{
             margin-bottom: 1rem;

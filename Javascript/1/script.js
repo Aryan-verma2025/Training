@@ -105,7 +105,8 @@ function handleRoll(event){
         if(event.target.id=="rollP1")
         gameState = gameStates.P1_turn;
         else
-        gameState = gameStates.P2_turn
+        gameState = gameStates.P2_turn;
+        updateTurn();
     } 
 
     const roll = rollDice();

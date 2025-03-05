@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game | Aryan Verma</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    
+    <div class="mainContainer">
+
+        <div class="p1">
+            
+            <div id="player1Card" class="container">
+
+                <div class="f-row">
+                    <input id="nameP1" type="text" class="playerName b-b">
+                </div>
+                
+                <div class="t-center c-w">
+                    <p class="head" >Current Score</p>
+                    <p class="score" id="currentScoreP1">0</p>
+                </div>
+                    
+                           
+                <div class="t-center c-w">
+                    <p class="head">Saved Score</p>
+                    <p  class="score" id="savedScoreP1">0</p>
+                </div>
+                    
+                <div class="f-row">
+                    <button id="rollP1" class="btn btn-p1">Roll dice</button>
+                    <button id="saveP1" class="btn btn-p1">Save Score</button>
+                </div>
+                
+
+            </div>
+            
+
+        </div>
+
+        <div class="middleContainer">
+
+            <div class="box">
+                
+                <div class="center c-w">
+                    <p class="head">WINNER!</p><br>
+                    <p class="head" id="winnerName"></p>
+                    
+                </div>
+
+            </div>
+
+            <div class="boxDice">
+
+                <div class="dice">
+
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+
+                </div>
+
+                <button onclick="init()" class="btn">RESET</button>
+
+            </div>
+
+            <div id="bottmoBox" class="box">
+
+            </div>
+
+        </div>
+
+        <div class="p2">
+            
+            <div id="player2Card" class="container">
+
+                <div class="f-row">
+                    <input id="nameP2" type="text" class="playerName b-p">
+                </div>
+                
+                <div class="t-center c-b">
+                    <p class="head" >Current Score</p>
+                    <p class="score" id="currentScoreP2">0</p>
+                </div>
+                    
+                           
+                <div class="t-center c-b">
+                    <p class="head">Saved Score</p>
+                    <p  class="score" id="savedScoreP2">0</p>
+                </div>
+                    
+                <div class="f-row">
+                    <button id="rollP2" class="btn btn-p2">Roll dice</button>
+                    <button id="saveP2" class="btn btn-p2">Save Score</button>
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

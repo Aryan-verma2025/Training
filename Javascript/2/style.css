@@ -182,6 +182,12 @@
   padding:10px;
 }
 
+#scoreValue{
+  color:green;
+  margin-left: 7px;
+  font-weight: bold;
+}
+
 @keyframes inflate {
   50%{scale: 1.2;}
   100%{scale: 1;}

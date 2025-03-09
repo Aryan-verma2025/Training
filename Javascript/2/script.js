@@ -30,7 +30,6 @@ function startGame(){
 }
 
 function fetchQuiz(category, difficulty){
-    console.log(category,difficulty);
     fetch(`https://opentdb.com/api.php?amount=20${category=='any'?'':`&category=${category}`}&difficulty=${difficulty}&type=multiple`)
     .then(resp=>{return resp.json()}).then(data=>{
         questions = data.results;
@@ -44,7 +43,6 @@ function fetchQuiz(category, difficulty){
 
 function showQuestions(){
  
-  console.log(questions);
   let incorectAnsIndex = 0;
   let correctAnsIndex = Math.floor(Math.random() * 3);
 
@@ -57,7 +55,6 @@ function showQuestions(){
 
     document.querySelectorAll(".quizOption p").forEach((ele)=>{
       ele.parentElement.classList.remove("correct-answer","incorrect-answer");
-      console.log(ele);
       if(correctAnsIndex != incorectAnsIndex){
       ele.innerText = decodeText(questions[currentQuestionNumber].incorrect_answers[incorectAnsIndex]);
       incorectAnsIndex++;
@@ -79,14 +76,11 @@ function showQuestions(){
 
 function handleOptionsClick(event){
   const option = event.target;
-  console.log("clicked element is ",option);
   const optionValue = option.innerText;
-  console.log(optionValue,"clicked option");
   if(timerId != null){
     clearInterval(timerId);
     timerId=null;
 
-    console.log(optionValue,"option value");
     if(optionValue == decodeText(questions[currentQuestionNumber].correct_answer)){
       option.parentElement.classList.add("correct-answer");
       score++;
@@ -94,10 +88,7 @@ function handleOptionsClick(event){
     }else{
       option.parentElement.classList.add("incorrect-answer");
       optionsArray.forEach((ele)=>{
-        console.log("comparing ",ele.innerText,"and", questions[currentQuestionNumber].correct_answer," and got ",ele.innerText == decodeText(questions[currentQuestionNumber].correct_answer))
         if(ele.innerText == decodeText(questions[currentQuestionNumber].correct_answer)){
-          console.log(ele);
-          console.log("correct answer found");
           ele.parentElement.classList.add("correct-answer");
         }
       });
@@ -122,10 +113,7 @@ function handleTimer(){
    
 
     document.querySelectorAll(".quizOption p").forEach((ele)=>{
-      console.log("comparing ",ele.innerText,"and", questions[currentQuestionNumber].correct_answer)
       if(ele.innerText == decodeText(questions[currentQuestionNumber].correct_answer)){
-        console.log(ele);
-        console.log("correct answer found");
         ele.parentElement.classList.add("correct-answer");
       }
     });

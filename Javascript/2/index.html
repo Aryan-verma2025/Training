@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game | Aryan Verma</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="startScreen" style="z-index: 1;">
+
+      <div class="headContainer">
+        <p class="head-big">QUIZ</p>
+      </div>
+      <div class="quizOptionsContainer">
+        <label class="text-label">Select Category</label>
+        <select class="select" id="trivia_category">
+          <option value="any">Any Category</option>
+          <option value="9">General Knowledge</option>
+          <option value="10">Entertainment: Books</option>
+          <option value="11">Entertainment: Film</option>
+          <option value="12">Entertainment: Music</option>
+          <option value="13">Entertainment: Musicals &amp; Theatres</option>
+          <option value="14">Entertainment: Television</option>
+          <option value="15">Entertainment: Video Games</option>
+          <option value="16">Entertainment: Board Games</option>
+          <option value="17">Science &amp; Nature</option>
+          <option value="18">Science: Computers</option>
+          <option value="19">Science: Mathematics</option>
+          <option value="20">Mythology</option>
+          <option value="21">Sports</option>
+          <option value="22">Geography</option>
+          <option value="23">History</option>
+          <option value="24">Politics</option>
+          <option value="25">Art</option>
+          <option value="26">Celebrities</option>
+          <option value="27">Animals</option>
+          <option value="28">Vehicles</option>
+          <option value="29">Entertainment: Comics</option>
+          <option value="30">Science: Gadgets</option>
+          <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+          <option value="32">Entertainment: Cartoon &amp; Animations</option>
+        </select>
+
+        <label class="text-label">Select Difficulty</label>
+        <select class="select" id="trivia_difficulty" class="form-control">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <button class="startBtn" onclick="startGame()">START QUIZ</button>
+      </div>
+    </div>
+
+    <div id="quizScreen" class="hide">
+        <div class="container-small">
+          <p><b>Score : </b><p id="scoreValue">0</p></p>
+        </div>
+        <div id="question" class="conatiner-question">
+          What is full form of RAM in Computers?
+        </div>
+        <div class="container-small">
+          <div class="timeBar">Time Left : </div>
+          <div id="timeValue" class="timeValue">0</div>s
+        </div>
+        <div class="container-options">
+            
+            <div class="quizOption">
+              <p></p>
+            </div>
+
+            <div class="quizOption">
+              <p></p>
+            </div>
+
+            <div class="quizOption">
+              <p></p>
+            </div>
+
+            <div class="quizOption">
+              <p></p>
+            </div>
+        
+        </div>
+    </div>
+
+    <div id="endScreen" class="hide container">
+
+      <div class="center">
+        <p class="head-big">Results</p>
+      </div>
+      <div class="resultScreenContainer">
+        <p class="finalScoreText">Final Score</p>
+        <p class="finalScore"></p>
+        <button class="btnPlayAgain" onclick="reset()">Play Again</button>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+
+
+</html>

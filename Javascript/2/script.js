@@ -135,6 +135,13 @@ function reset(){
   endScreen.classList.add("hide");
   startScreen.classList.remove("hide");
   document.querySelector(".finalScore").innerText = '0';
+  document.getElementById("scoreValue").innerText = '0';
+  questionBox.innerText = "Loading Questiong Please Wait...";
+
+    document.querySelectorAll(".quizOption p").forEach((ele)=>{
+      ele.parentElement.classList.remove("correct-answer","incorrect-answer");
+      ele.innerText = "";
+    })
 }
 
 

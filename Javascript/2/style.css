@@ -33,7 +33,7 @@
   margin-top: 0.5rem;
   text-align: center;
   padding:0.5rem;
-  font-size: 20px;
+  font-size: 1.5rem;
   border-radius: 10px;
   border:none;
   appearance: none;
@@ -41,6 +41,7 @@
   color:whitesmoke;
   font-weight: bold;
   cursor: pointer;
+  max-width: 90%;
 }
 
 .select:hover{
@@ -123,10 +124,12 @@
 }
 
 .correct-answer{
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.500);
+  border-color: rgba(0, 128, 0, 1);;
 }
 .incorrect-answer{
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.500);
+  border-color: rgba(255, 0, 0, 1);
 }
 
 .center{
@@ -139,7 +142,9 @@
   height: 50%;
   margin:auto;
   text-align: center;
-  border:1px solid black;
+  border:1px dashed black;
+  border-width: 3px;
+  background-color: rgb(255, 243, 220);
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -193,3 +198,36 @@
   100%{scale: 1;}
 }
 
+
+@media (max-width:900px){
+  .head-big{
+    font-size: 90px;
+  }
+  .quizOptionsContainer{
+    width:90%;
+    padding:10px;
+  }
+  .container{
+    width: 100vw;
+  }
+.resultScreenContainer{
+    width:90%;
+  }
+
+}
+
+@media (max-height:820px) {
+  .quizOptionsContainer{
+    padding:10px;
+  }
+}
+
+@media (max-height:700px) {
+  .container-options{
+    margin-top: 0px;
+  }
+  .quizOption{
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}

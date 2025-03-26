@@ -39,7 +39,7 @@ class GraduateStudent extends Student {
 
 }
 
-public class OOP1 {
+public class OOP {
     public static void main(String[] args) {
         Student student = new Student("Aryan", 3001, 99);
         GraduateStudent gradStudent = new GraduateStudent("Bob", 3002, 92, true,"Nucleus Teq");

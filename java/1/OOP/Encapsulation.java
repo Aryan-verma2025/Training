@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class OOP3 {
+public class Encapsulation {
      public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Student myStudent = new Student("Alice", 20, 70);

@@ -1,4 +1,4 @@
-public class OOP2 {
+public class Polymorphism {
     public static void main(String[] args) {
         Parent p = new Parent();
         p.show();

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class program1 {
+public class PrimeNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         

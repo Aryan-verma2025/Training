@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class program2 {
+public class NestedIf {
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);

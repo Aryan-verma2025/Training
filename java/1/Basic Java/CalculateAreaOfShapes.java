@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class program1 {
+public class CalculateAreaOfShapes {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

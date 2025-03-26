@@ -1,4 +1,4 @@
-class program1{
+class AverageOfArrayValues{
     public static void main(String[] args) {
 
         int array[] = {3,4,5,6,7,1,2,3,98,34};

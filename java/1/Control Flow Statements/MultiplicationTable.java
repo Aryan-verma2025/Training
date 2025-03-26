@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class program3 {
+public class MultiplicationTable {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

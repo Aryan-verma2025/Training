@@ -1,4 +1,4 @@
-public class program4 {
+public class SumEven {
     public static void main(String[] args) {
         int sum = 0;
         int num = 1;
